@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Lab Exercise</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+    <div class="dashboard-grid">
+
+        <!-- 1. SIDEBAR NAVIGATION -->
+        <aside class="sidebar">
+            <div class="sidebar-brand">
+                <h2>Estimade</h2>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#" class="active">Overview</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">Analytics</a></li>
+                <li><a href="#">Settings</a></li>
+            </ul>
+        </aside>
+
+        <!-- 2. MAIN CONTENT AREA -->
+        <main class="main-content">
+
+            <!-- Top Header (Flexbox Layout) -->
+            <header class="top-header">
+                <div class="welcome-text">
+                    <h1>Hello Noah, here's your overview</h1>
+                </div>
+                <div class="user-profile">
+                    <span class="badge">Pro Member</span>
+                    <button class="btn-download">Download Report</button>
+                </div>
+            </header>
+
+            <!-- Metrics Cards Section (Grid or Flex Wrap) -->
+            <section class="metrics-grid">
+                <div class="card metric-card">
+                    <p class="metric-title">Total Revenue</p>
+                    <h3 class="metric-value">$121,920</h3>
+                </div>
+                <div class="card metric-card">
+                    <p class="metric-title">Transactions</p>
+                    <h3 class="metric-value">89,121</h3>
+                </div>
+                <div class="card metric-card">
+                    <p class="metric-title">Customers</p>
+                    <h3 class="metric-value">12,992</h3>
+                </div>
+                <div class="card metric-card">
+                    <p class="metric-title">Growth</p>
+                    <h3 class="metric-value text-success">+21.20%</h3>
+                </div>
+            </section>
+
+            <!-- Detailed Content Section (Split Grid / Flex) -->
+            <section class="content-grid">
+                
+                <!-- Latest Transactions Panel -->
+                <div class="card transactions-panel">
+                    <h3>Latest transactions</h3>
+                    <ul class="transaction-list">
+                        <li class="transaction-item">
+                            <span>Jessica McCullough</span>
+                            <span class="status pending">Pending</span>
+                            <span class="amount">+$510.12</span>
+                        </li>
+                        <li class="transaction-item">
+                            <span>Antoine Rosenberg</span>
+                            <span class="status completed">Completed</span>
+                            <span class="amount">+$750.00</span>
+                        </li>
+                        <li class="transaction-item">
+                            <span>Richard Bouchner</span>
+                            <span class="status pending">Pending</span>
+                            <span class="amount">+$230.50</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Performance Chart / Promo Panel -->
+                <div class="card promo-panel">
+                    <h3>Performance</h3>
+                    <p>Go premium & get more daily insights and automated analytics reports.</p>
+                    <button class="btn-primary">Upgrade Now</button>
+                </div>
+
+            </section>
+
+        </main>
+    </div>
+
+</body>
+</html>

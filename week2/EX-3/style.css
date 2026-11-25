@@ -1,0 +1,21 @@
+/* TODO */
+body {
+    margin: 40px;
+    font-family: Arial, sans-serif;
+}
+
+button {
+    padding: 30px 60px;
+    background: #f984cd;
+    border: 12px solid #dc74b0;
+    border-radius: 50px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+button:hover {
+    background: #ad5789;
+    border-color: #6d3555;
+}

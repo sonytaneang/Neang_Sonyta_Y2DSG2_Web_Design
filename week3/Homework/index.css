@@ -1,0 +1,197 @@
+/* ==========================================
+   1. GLOBAL RESET & BASE STYLES
+   ================================---------- */
+* {
+    /* TODO 1.1: Add box-sizing and remove default margins/padding */
+    font-family: 'Inter', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #f4f7f6;
+    color: #1e293b;
+    min-height: 100vh;
+}
+
+.card {
+    background: #ffffff;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+    padding: 24px;
+}
+
+/* ==========================================
+   2. MACRO LAYOUT: DASHBOARD GRID (CSS Grid)
+   ================================---------- */
+.dashboard-grid {
+    /* TODO 2.1: Turn this into a CSS Grid with a fixed 260px sidebar and a fluid 1fr main content area */
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 260px 1fr;
+}
+
+/* ==========================================
+   3. SIDEBAR NAVIGATION
+   ================================---------- */
+.sidebar {
+    background-color: #0f172a;
+    color: #ffffff;
+    padding: 24px 20px;
+    /* TODO 3.1: Use Flexbox to make a vertical column with a 30px gap */
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.nav-links {
+    list-style: none;
+    /* TODO 3.2: Use Flexbox to stack navigation links vertically with an 8px gap */
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.nav-links a {
+    display: block;
+    color: #94a3b8;
+    text-decoration: none;
+    padding: 12px 16px;
+    border-radius: 8px;
+}
+
+.nav-links a:hover, 
+.nav-links a.active {
+    background-color: #1e293b;
+    color: #ffffff;
+}
+
+/* ==========================================
+   4. MAIN CONTENT AREA & HEADER (Flexbox)
+   ================================---------- */
+.main-content {
+    padding: 30px 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.top-header {
+    /* TODO 4.1: Use Flexbox to push the welcome text to the left and profile controls to the right */
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.user-profile {
+    /* TODO 4.2: Use Flexbox to align the badge and download button horizontally with a 15px gap */
+    display: flex;;
+    flex-direction: row;
+    gap: 15px;
+}
+
+/* ==========================================
+   5. METRICS GRID SECTION (CSS Grid)
+   ================================---------- */
+.metrics-grid {
+    /* TODO 5.1: Create an auto-fit grid where columns have a minimum width of 220px and share free space (1fr) */
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+}
+
+.metric-card {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+/* ==========================================
+   6. DETAILED CONTENT GRID SECTION (CSS Grid)
+   ================================---------- */
+.content-grid {
+    /* TODO 6.1: Create a 2-column grid where the first column takes 2 fractions (2fr) and the second takes 1 (1fr) */
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+}
+
+.transaction-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 12px;
+}
+
+.transaction-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.promo-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    background-color: #1e293b;
+    color: #ffffff;
+}
+
+.promo-panel p{
+    color: #94a3b8;
+}
+
+.badge{
+    padding: 6px 12px;
+    align-self: center;
+    border: 1px solid gray;
+    border-radius: 999px;
+    color: #0084ff;
+}
+
+.btn-download{
+    padding: 12px 18px;
+    align-self: center;
+    color: #f4f7f6;
+    background-color: #1e293b;  
+    border-radius: 10px;  
+    font-size: 15px;
+}
+
+.btn-primary{
+    color: black;
+    background-color: #009dff;
+    padding: 15px;
+    border-radius: 15px;
+    border: 1px solid black1;
+    font-size: 15px;
+}
+
+
+
+/* ==========================================
+   7. RESPONSIVE MEDIA QUERIES
+   ================================---------- */
+
+/* Tablet and Smaller Desktops (< 1024px) */
+@media (max-width: 1023px) {
+    .content-grid {
+        /* TODO 7.1: Collapse the content grid into a single column */
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Mobile Devices (< 768px) */
+@media (max-width: 767px) {
+    .dashboard-grid {
+        /* TODO 7.2: Collapse the dashboard into a single column layout */
+        grid-template-columns: 1fr;
+    }
+
+    .sidebar {
+        /* TODO 7.3: Hide the sidebar on mobile screens */
+        display: none;
+    }
+}

@@ -1,0 +1,242 @@
+/* ==========================================
+   1. GLOBAL RESET & BASE STYLES
+   ========================================== */
+* {
+  /* TODO 1.1: Add box-sizing and remove default margins/padding */
+  font-family:
+    "Inter",
+    -apple-system,
+    sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #f8fafc;
+  color: #1e293b;
+  line-height: 1.5;
+}
+
+/* Base media scaling */
+img,
+.image-box {
+  /* TODO 1.2: Ensure images and boxes scale flexibly and never overflow */
+  max-width: 100%;
+  display: block;
+  height: auto;
+}
+
+/* ==========================================
+   2. NAVIGATION BAR (Mobile-First / Flexbox)
+   ========================================== */
+.navbar {
+  background-color: #0f172a;
+  color: #ffffff;
+  padding: 16px 20px;
+  /* TODO 2.1: Use Flexbox to stack the navbar elements vertically in a column by default on mobile */
+  align-items: center;
+  gap: 12px;
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: 700;
+  color: #38bdf8;
+}
+
+.nav-menu {
+  /* TODO 2.2: Use Flexbox to align nav links horizontally with a 15px gap */
+  display: flex;
+  justify-content: flex-start;
+  gap: 15px;
+
+}
+
+.nav-menu a {
+  color: #94a3b8;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.nav-menu a:hover {
+  color: #ffffff;
+}
+
+.btn-cart {
+  background-color: #38bdf8;
+  color: #0f172a;
+  border: none;
+  padding: 6px 14px;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* ==========================================
+   3. MAIN CONTAINER & HERO SECTION
+   ========================================== */
+.main-container {
+  padding: 20px 16px;
+  max-width: 1200px;
+  margin: 0 auto;
+  /* TODO 3.1: Use Flexbox to create a vertical column layout with a 40px gap */
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.hero-section {
+  background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+  color: #ffffff;
+  border-radius: 16px;
+  padding: 30px 20px;
+  /* TODO 3.2: Use Flexbox to stack the hero content and image vertically on mobile */
+  gap: 24px;
+  align-items: center;
+  text-align: center;
+}
+
+.hero-content h1 {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.hero-content p {
+  font-size: 14px;
+  color: #94a3b8;
+  margin-bottom: 20px;
+}
+
+.btn-shop {
+  background-color: #38bdf8;
+  color: #0f172a;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.image-box {
+  background-color: #334155;
+  color: #38bdf8;
+  font-size: 20px;
+  font-weight: 600;
+  height: 180px;
+  width: 100%;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px dashed #475569;
+}
+
+/* ==========================================
+   4. PRODUCT CATALOG SECTION (CSS Grid)
+   ========================================== */
+.catalog-section h2 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #0f172a;
+}
+
+.product-grid {
+  /* TODO 4.1: Turn this into a CSS Grid with 1 column by default for mobile and a 20px gap */
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.product-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.product-img {
+  background-color: #f1f5f9;
+  height: 140px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 36px;
+}
+
+.product-card h3 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #0f172a;
+}
+
+.price {
+  font-size: 16px;
+  font-weight: 700;
+  color: #059669;
+}
+
+.btn-buy {
+  background-color: #0f172a;
+  color: #ffffff;
+  border: none;
+  padding: 10px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* ==========================================
+   5. FOOTER SECTION
+   ========================================== */
+.site-footer {
+  text-align: center;
+  padding: 20px;
+  color: #64748b;
+  font-size: 13px;
+  border-top: 1px solid #e2e8f0;
+  margin-top: 40px;
+}
+
+/* ==========================================
+   6. RESPONSIVE MEDIA QUERIES
+   ========================================== */
+
+/* Tablet View (min-width: 768px) */
+@media (min-width: 768px) {
+  .navbar {
+    /* TODO 6.1: Switch navbar layout to a horizontal row with space between */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .hero-section {
+    /* TODO 6.2: Switch hero section to side-by-side row layout with left-aligned text */
+    display: flex;
+    flex-direction: row;
+    align-items: left;
+  }
+
+  .product-grid {
+    /* TODO 6.3: Expand product grid to 2 columns */
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+  }
+}
+
+/* Desktop View (min-width: 1024px) */
+@media (min-width: 1024px) {
+  .product-grid {
+    /* TODO 6.4: Expand product grid to 4 columns for large desktop screens */
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+  }
+}
