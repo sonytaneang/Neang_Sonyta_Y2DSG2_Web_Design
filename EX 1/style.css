@@ -1,0 +1,22 @@
+.container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 15px;
+}
+
+.box{
+    background-color: rgb(135, 216, 253);
+    border: solid 0.1px;
+}
+
+@media (max-width : 768px){
+    .container{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media(max-width : 480px) {
+    .container{
+        grid-template-columns: 1fr;
+    }
+}
